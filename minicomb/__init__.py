@@ -1,4 +1,3 @@
-
 def factorial(k: int):
     """Calculates the factorial of a given integer k. Negative numbers are not allowed.
 
@@ -29,16 +28,16 @@ def factorial(k: int):
 def binomial(n: int, k: int) -> int:
     """Calculates the binomial coefficient of (n, k).
 
-    Defined as 
+    Defined as
 
         \frac{n!}{k! \cdot (n-k)!}
-    
+
     We also have the following equality:
 
         TODO: fill me in
 
     Can be used to calculate unordered selections of k items from n possible.
-    
+
     >>> binomial(4, 2)
     6
 
@@ -47,7 +46,7 @@ def binomial(n: int, k: int) -> int:
     >>> binomial(4 + 2 - 1, 2)
     10
 
-    n must be non-negative. For k <= 0, this returns zero no matter what, which is mostly for 
+    n must be non-negative. For k <= 0, this returns zero no matter what, which is mostly for
     convenience.
 
     For k > n, this returns zero.
@@ -55,8 +54,8 @@ def binomial(n: int, k: int) -> int:
     n, k = int(n), int(k)
     if n < 0:
         raise ValueError("negative n is not allowed.")
-    if k > n or  k < 0:
+    if k > n or k < 0:
         return 0
-    
+
     # TODO: make this more efficient
     return factorial(n) // (factorial(k) * factorial(n - k))
