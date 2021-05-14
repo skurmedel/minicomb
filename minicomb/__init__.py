@@ -59,4 +59,4 @@ def binomial(n: int, k: int) -> int:
         return 0
     
     # TODO: make this more efficient
-    return factorial(n) / (factorial(k) * factorial(n - k))
+    return factorial(n) // (factorial(k) * factorial(n - k))

@@ -30,5 +30,8 @@ def test_binomial():
         ((5, 3), 10)
     ]
 
+    # Make sure we get an int
+    assert type(binomial(256, 32)) == int
+
     for args, actual in simple_cases:
         assert binomial(*args) == actual
